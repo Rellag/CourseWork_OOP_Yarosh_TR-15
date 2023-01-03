@@ -1,0 +1,15 @@
+/Users/vladinin/Projects/CourseWork/bin/Debug/net6.0/CourseWork
+/Users/vladinin/Projects/CourseWork/bin/Debug/net6.0/CourseWork.deps.json
+/Users/vladinin/Projects/CourseWork/bin/Debug/net6.0/CourseWork.runtimeconfig.json
+/Users/vladinin/Projects/CourseWork/bin/Debug/net6.0/CourseWork.dll
+/Users/vladinin/Projects/CourseWork/bin/Debug/net6.0/CourseWork.pdb
+/Users/vladinin/Projects/CourseWork/obj/Debug/net6.0/CourseWork.csproj.AssemblyReference.cache
+/Users/vladinin/Projects/CourseWork/obj/Debug/net6.0/CourseWork.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vladinin/Projects/CourseWork/obj/Debug/net6.0/CourseWork.AssemblyInfoInputs.cache
+/Users/vladinin/Projects/CourseWork/obj/Debug/net6.0/CourseWork.AssemblyInfo.cs
+/Users/vladinin/Projects/CourseWork/obj/Debug/net6.0/CourseWork.csproj.CoreCompileInputs.cache
+/Users/vladinin/Projects/CourseWork/obj/Debug/net6.0/CourseWork.dll
+/Users/vladinin/Projects/CourseWork/obj/Debug/net6.0/refint/CourseWork.dll
+/Users/vladinin/Projects/CourseWork/obj/Debug/net6.0/CourseWork.pdb
+/Users/vladinin/Projects/CourseWork/obj/Debug/net6.0/CourseWork.genruntimeconfig.cache
+/Users/vladinin/Projects/CourseWork/obj/Debug/net6.0/ref/CourseWork.dll
