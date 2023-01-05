@@ -17,37 +17,65 @@ namespace CourseWork.Controllers
             }
 
             Console.WriteLine("\nВведіть 0 щоб повернутися");
-            Console.WriteLine("Оберіть номер гри, яку хочете купити");
+            Console.WriteLine("Введіть: 1 - Разова покупка, 2 - взяти кошик");
 
             bool flag = true;
-            while (flag){
 
-                int typed = (Convert.ToInt32(Console.ReadLine()));
+            while (flag)
+            {
+                int typed = Convert.ToInt32(Console.ReadLine());
                 switch (typed)
                 {
                     case 0:
-                        flag = false;
-                      
+                        break;
+
+                    case 1:
+                        Console.WriteLine("\nВведіть номер товару щоб купити");
+                        int index = Convert.ToInt32(Console.ReadLine());
+                        if (index > 0 && index < mockProduct.products.Count())
+                        {
+                            index--;
+                            if (mockProduct.products[index].price > CurrCustomer.balance)
+                            {
+                                Console.WriteLine("У Вас недостатньо коштів!");
+                                continue;
+                            }
+                            CurrCustomer.Buying(mockProduct, index);
+
+                        }
+                        break;
+
+                    case 2:
+                        
+
+                       
+                        while (true)
+                        {
+
+                            Console.WriteLine("\nВведіть 0 щоб повернутися");
+                            Console.WriteLine("\nВведіть номер товару щоб додати до кошика");
+                            index = Convert.ToInt32(Console.ReadLine());
+
+                            if (index == 0)
+                            {
+                                break;
+                            }
+
+                            if (index > 0 && index < mockProduct.products.Count())
+                            {
+                                CurrCustomer.cart.addToCart(mockProduct.products[index]);
+                                Console.WriteLine("Гра " + mockProduct.products[index].name + " в кошику!");
+                            }
+                            
+                        }
                         break;
                 }
-
-                if(typed > 0 && typed < mockProduct.products.Count())
-                {
-                    if(mockProduct.products[typed - 1].price > CurrCustomer.balance)
-                    {
-                        Console.WriteLine("У Вас недостатньо коштів!");
-                        continue;
-                    }
-                    BoughtProduct bought = new BoughtProduct();
-                    bought.setByAnotherProduct(mockProduct.products[typed - 1], DateTime.Now);
-
-                    CurrCustomer.balance -= bought.price;
-                    Console.WriteLine("Поточний баланс:" + CurrCustomer.balance);
-
-                    CurrCustomer.history.Add(bought);
-                }
-
+                flag = false;
             }
+
+                
+
+            
 
             
             

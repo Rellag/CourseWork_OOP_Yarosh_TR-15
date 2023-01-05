@@ -4,7 +4,7 @@ namespace CourseWork.Controllers
 {
     internal interface IRun
     {
-        void Run(Customer customer);
+        void Run(Customer CurrCustomer);
     }
 }
 

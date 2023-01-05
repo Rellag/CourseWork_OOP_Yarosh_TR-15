@@ -6,10 +6,44 @@ namespace CourseWork
         public int custId { get; set; }
         public string name { get; set; }
         public int balance { get; set; }
+        public ShopCart cart = new ShopCart();
 
         public List<BoughtProduct> history = new List<BoughtProduct>();
 
-        
+
+
+        public void Buying(MockProduct mockProduct, int id)
+        {
+           
+            BoughtProduct bought = new BoughtProduct();
+            bought.setByAnotherProduct(mockProduct.products[id], DateTime.Now);
+
+            balance -= bought.price;
+            Console.WriteLine("Поточний баланс:" + balance);
+
+            history.Add(bought);
+        }
+
+        public void Buying(Product product)
+        {
+            BoughtProduct bought = new BoughtProduct();
+            bought.setByAnotherProduct(product, DateTime.Now);
+
+            balance -= bought.price;
+            
+
+            history.Add(bought);
+        }
+
+
+        public void BuyingCart()
+        {
+            foreach(Product item in cart.productsInCart)
+            {
+                Buying(item);
+            }
+        }
+
 
         public override string? ToString()
         {

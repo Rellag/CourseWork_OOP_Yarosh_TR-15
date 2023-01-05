@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/vladinin/Projects/CourseWork/CourseWork.csproj",
+      "projectUniqueName": "/Users/vladinin/Projects/CourseWork/CourseWork_OOP_Yarosh_TR-15/CourseWork.csproj",
       "projectName": "CourseWork",
-      "projectPath": "/Users/vladinin/Projects/CourseWork/CourseWork.csproj",
+      "projectPath": "/Users/vladinin/Projects/CourseWork/CourseWork_OOP_Yarosh_TR-15/CourseWork.csproj",
       "packagesPath": "/Users/vladinin/.nuget/packages/",
-      "outputPath": "/Users/vladinin/Projects/CourseWork/obj/",
+      "outputPath": "/Users/vladinin/Projects/CourseWork/CourseWork_OOP_Yarosh_TR-15/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/vladinin/.nuget/NuGet/NuGet.Config"
