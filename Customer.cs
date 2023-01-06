@@ -19,7 +19,7 @@ namespace CourseWork
             bought.setByAnotherProduct(mockProduct.products[id], DateTime.Now);
 
             balance -= bought.price;
-            Console.WriteLine("Поточний баланс:" + balance);
+            Console.WriteLine("Поточний баланс: " + balance.ToString("C"));
 
             history.Add(bought);
         }
@@ -42,6 +42,7 @@ namespace CourseWork
             {
                 Buying(item);
             }
+            cart.productsInCart.RemoveRange(0, cart.productsInCart.Count());
         }
 
 

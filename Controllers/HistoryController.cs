@@ -19,13 +19,10 @@ namespace CourseWork.Controllers
             }
 
             Console.WriteLine("Загалом було витрачено: " + sum.ToString("C"));
-            Console.WriteLine("\nВведіть 0 щоб повернутися");
+            Console.WriteLine("\nВведіть що-небудь, щоб повернутися");
 
-            switch (Convert.ToInt32(Console.ReadLine()))
-            {
-                case 0:
-                    break;
-            }
+            Console.ReadKey();
+            
         }
     }
 }

@@ -5,18 +5,15 @@ namespace CourseWork.Controllers
     {
         public void Run()
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Інтернет магазин");
 
             List<Customer> customers = new List<Customer>();
-            
-            Customer CurrCustomer = null;
-            bool flag = true;
 
-            while (flag)
+            Customer CurrCustomer;
             {
                 Console.Clear();
                 LogInController logIn = new LogInController();
-                CurrCustomer = logIn.Run(CurrCustomer, customers);
+                CurrCustomer = logIn.Run(customers);
 
                 while (true)
                 {
@@ -24,38 +21,34 @@ namespace CourseWork.Controllers
 
                     Console.WriteLine("Оберіть команду:");
                     Console.WriteLine("1 - Поповнити баланс\n2 - Подивитись історію покупок\n3 - Перейти до магазину\n4 - Переглянути кошик\n0 - Назад");
+                    int typed = Convert.ToInt32(Console.ReadLine());
+                    Console.Clear();
 
-                    switch (Convert.ToInt32(Console.ReadLine()))
+                    if (typed == 0)
                     {
-                        case 0:
-                            
-                            break;
-                        case 1:
-                            Console.Clear();
-                            BalanceController balance = new BalanceController();
-                            balance.Run(CurrCustomer);
-                            continue;
-                        case 2:
-                            Console.Clear();
-                            HistoryController history = new HistoryController();
-                            history.Run(CurrCustomer);
-                            continue;
-                        case 3:
-                            Console.Clear();
-                            GoToShopController shop = new GoToShopController();
-                            shop.Run(CurrCustomer);
-                            continue;
-                        case 4:
-                            Console.Clear();
-                            ShopCartController cartController = new ShopCartController();
-                            cartController.Run(CurrCustomer);
-                            continue;
-
-                        default:
-                            continue;
-
+                        break;
                     }
-                    break;
+                    else if (typed == 1)
+                    {
+                        BalanceController balance = new BalanceController();
+                        balance.Run(CurrCustomer);
+                    }
+                    else if (typed == 2)
+                    {
+                        HistoryController history = new HistoryController();
+                        history.Run(CurrCustomer);
+                    }
+                    else if (typed == 3)
+                    {
+                        GoToShopController shop = new GoToShopController();
+                        shop.Run(CurrCustomer);
+                    }
+                    else if (typed == 4)
+                    {
+                        ShopCartController cartController = new ShopCartController();
+                        cartController.Run(CurrCustomer);
+                    }
+
                 }
 
 

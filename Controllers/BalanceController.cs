@@ -25,12 +25,9 @@ namespace CourseWork.Controllers
                     flag2 = true;
                 }
             }
-            Console.WriteLine("\nВведіть 0 щоб повернутися");
-            switch (Convert.ToInt32(Console.ReadLine()))
-            {
-                case 0:
-                    break;
-            }
+            Console.WriteLine("\nВведіть будь-що, щоб продовжити");
+
+            Console.ReadKey();
 
 
         }

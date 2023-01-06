@@ -13,15 +13,23 @@ namespace CourseWork
         public void removeProduct(Product product)
         {
             productsInCart.Remove(product);
+            message();
         }
 
         public void removeProduct(int index)
         {
-            if(productsInCart.Count() >= index && index >= 0)
+            if(productsInCart.Count() > index && index >= 0)
             {
-                productsInCart.Remove(productsInCart[index]);
+                productsInCart.RemoveAt(index);
+                message();
             }
             
+            
+        }
+
+        private void message()
+        {
+            Console.WriteLine("Елемент видалено");
         }
     }
 }

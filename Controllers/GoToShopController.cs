@@ -16,70 +16,60 @@ namespace CourseWork.Controllers
                     item.id, item.name, item.Genre, item.desc, item.price.ToString("C"));
             }
 
-            Console.WriteLine("\nВведіть 0 щоб повернутися");
-            Console.WriteLine("Введіть: 1 - Разова покупка, 2 - взяти кошик");
+            
 
-            bool flag = true;
 
-            while (flag)
+            while (true)
             {
+                Console.WriteLine("\nВведіть 0 щоб повернутися");
+                Console.WriteLine("Введіть: 1 - Разова покупка, 2 - взяти кошик");
                 int typed = Convert.ToInt32(Console.ReadLine());
-                switch (typed)
+                if (typed == 0)
                 {
-                    case 0:
-                        break;
+                    break;
+                }
+                else if (typed == 1)
+                {
+                    Console.WriteLine("\nВведіть номер товару щоб купити");
+                    int index = Convert.ToInt32(Console.ReadLine());
+                    if (index > 0 && index <= mockProduct.products.Count())
+                    {
+                        index--;
+                        if (mockProduct.products[index].price > CurrCustomer.balance)
+                        {
+                            Console.WriteLine("У Вас недостатньо коштів!");
+                            continue;
+                        }
+                        CurrCustomer.Buying(mockProduct, index);
 
-                    case 1:
-                        Console.WriteLine("\nВведіть номер товару щоб купити");
+                    }
+                }
+                else if (typed == 2)
+                {
+                    Console.WriteLine("\nВведіть 0 щоб повернутися");
+                    Console.WriteLine("\nВведіть номер товару щоб додати до кошика");
+                    while (true)
+                    {
+                        
                         int index = Convert.ToInt32(Console.ReadLine());
-                        if (index > 0 && index < mockProduct.products.Count())
+
+                        if (index == 0)
+                        {
+                            break;
+                        }
+
+                        if (index > 0 && index <= mockProduct.products.Count())
                         {
                             index--;
-                            if (mockProduct.products[index].price > CurrCustomer.balance)
-                            {
-                                Console.WriteLine("У Вас недостатньо коштів!");
-                                continue;
-                            }
-                            CurrCustomer.Buying(mockProduct, index);
-
+                            CurrCustomer.cart.addToCart(mockProduct.products[index]);
+                            Console.WriteLine("Гра " + mockProduct.products[index].name + " в кошику!");
                         }
-                        break;
 
-                    case 2:
-                        
-
-                       
-                        while (true)
-                        {
-
-                            Console.WriteLine("\nВведіть 0 щоб повернутися");
-                            Console.WriteLine("\nВведіть номер товару щоб додати до кошика");
-                            index = Convert.ToInt32(Console.ReadLine());
-
-                            if (index == 0)
-                            {
-                                break;
-                            }
-
-                            if (index > 0 && index < mockProduct.products.Count())
-                            {
-                                CurrCustomer.cart.addToCart(mockProduct.products[index]);
-                                Console.WriteLine("Гра " + mockProduct.products[index].name + " в кошику!");
-                            }
-                            
-                        }
-                        break;
+                    }
                 }
-                flag = false;
+                
             }
 
-                
-
-            
-
-            
-            
-           
         }
 
 

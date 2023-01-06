@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/vladinin/Projects/CourseWork/CourseWork_OOP_Yarosh_TR-15/CourseWork.csproj": {}
+    "/Users/vladinin/Documents/GitHub/CourseWork_OOP_Yarosh_TR-15 — копия/CourseWork.csproj": {}
   },
   "projects": {
-    "/Users/vladinin/Projects/CourseWork/CourseWork_OOP_Yarosh_TR-15/CourseWork.csproj": {
+    "/Users/vladinin/Documents/GitHub/CourseWork_OOP_Yarosh_TR-15 — копия/CourseWork.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vladinin/Projects/CourseWork/CourseWork_OOP_Yarosh_TR-15/CourseWork.csproj",
+        "projectUniqueName": "/Users/vladinin/Documents/GitHub/CourseWork_OOP_Yarosh_TR-15 — копия/CourseWork.csproj",
         "projectName": "CourseWork",
-        "projectPath": "/Users/vladinin/Projects/CourseWork/CourseWork_OOP_Yarosh_TR-15/CourseWork.csproj",
+        "projectPath": "/Users/vladinin/Documents/GitHub/CourseWork_OOP_Yarosh_TR-15 — копия/CourseWork.csproj",
         "packagesPath": "/Users/vladinin/.nuget/packages/",
-        "outputPath": "/Users/vladinin/Projects/CourseWork/CourseWork_OOP_Yarosh_TR-15/obj/",
+        "outputPath": "/Users/vladinin/Documents/GitHub/CourseWork_OOP_Yarosh_TR-15 — копия/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/vladinin/.nuget/NuGet/NuGet.Config"
