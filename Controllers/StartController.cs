@@ -38,7 +38,7 @@ namespace CourseWork.Controllers
                         {
                             break;
                         }
-                        else if (typed > 0 && typed < runs.Count())
+                        else if (typed > 0 && typed <= runs.Count())
                         {
                             typed--;
                             runs[typed].Run(CurrCustomer);
